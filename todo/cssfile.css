@@ -1,0 +1,67 @@
+/* General page styling, like the reservations project */
+* { box-sizing: border-box; }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #edf1f7;
+    color: #303640;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px 12px;
+}
+.app {
+    width: 740px;
+    max-width: 100%;
+    background: white;
+    border-radius: 12px;
+    padding: 22px 20px 18px;
+    box-shadow: 0 3px 15px rgba(25, 45, 75, 0.06);
+}
+h1 { font-size: 21px; margin: 0 0 14px; }
+#add-form { display: flex; gap: 10px; }
+#name {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #edf0f4;
+    border-radius: 7px;
+    background: #fafbfc;
+    font-size: 14px;
+}
+button, input { font: inherit; }
+button { cursor: pointer; }
+#add {
+    background: #3485ed;
+    color: white;
+    border: 0;
+    border-radius: 7px;
+    padding: 10px 17px;
+    font-size: 14px;
+}
+#add:hover { background: #226fce; }
+.toolbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin: 18px 0 12px; }
+.toolbar p { color: #92979e; font-size: 12px; margin: 0; }
+.filters { display: flex; gap: 6px; }
+.filters button { border: 0; background: transparent; color: #777f89; padding: 7px 10px; border-radius: 7px; font-size: 12px; font-weight: bold; }
+.filters .selected { color: #347ce1; background: #eaf2ff; }
+#list { padding: 0; margin: 0; list-style: none; }
+#list li { display: flex; align-items: center; gap: 14px; min-height: 48px; padding: 10px 12px; border-bottom: 1px solid #f0f1f4; font-size: 14px; }
+#list li[hidden] { display: none; }
+#list input[type="checkbox"] { accent-color: #9b7ab6; cursor: pointer; margin: 0; }
+.todo-text { flex: 1; overflow-wrap: anywhere; cursor: text; }
+.completed .todo-text { color: #a0a5ac; text-decoration: line-through; }
+.remove { margin-left: auto; border: 0; background: transparent; color: #a6a9ae; padding: 5px 7px; font-size: 16px; }
+.remove:hover { color: #d34d5a; }
+.edit { flex: 1; min-width: 0; padding: 5px; border: 1px solid #3485ed; border-radius: 4px; }
+footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-top: 15px; color: #969ca4; font-size: 12px; }
+footer div { display: flex; gap: 7px; }
+footer button { color: #7e858e; background: #f6f7f8; border: 1px solid #cbd0d6; border-radius: 3px; padding: 2px 6px; font-size: 12px; }
+button:focus-visible, input:focus-visible, .todo-text:focus-visible { outline: 2px solid #3485ed; outline-offset: 3px; }
+@media (max-width: 540px) {
+    body { padding: 8px; }
+    .app { padding: 18px 14px; }
+    .toolbar { flex-wrap: wrap; }
+    .filters { margin-left: auto; }
+}
